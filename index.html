@@ -69,12 +69,15 @@
       text-shadow: 0 0 10px #caffbf;
     }
     canvas {
-      width: 100%;
-      max-width: 420px;
       background: rgba(30, 40, 30, 0.8);
       border-radius: 10px;
       padding: 1rem;
       transition: box-shadow 0.3s;
+      width: 360px !important;
+      height: 360px !important;
+      max-width: 100%;
+      display: block;
+      margin: 1rem auto;
     }
     canvas:hover {
       box-shadow: 0 0 20px #caffbf;
@@ -139,8 +142,13 @@
       top: 10px;
       right: 10px;
       background: #333;
-      width: 30px;
-      height: 30px;
+      width: 40px;
+      height: 40px;
+      font-size: 1.5rem;
+      color: #a8e6cf;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .notification {
       position: fixed;
@@ -180,102 +188,288 @@
     <img src="avatar.png" alt="Zereck" class="avatar"/>
     <div class="contacts">
       <a id="summonBtn" data-msg="summon">Summon Hero</a> |
-      <a href="#" data-msg="github">GitHub</a> |
-      <a href="#" data-msg="linkedin">LinkedIn</a> |
-      <a href="tel:+37368123456">📞 +373 68 123456</a>
+      <a href="https://github.com/Ygrikk" data-msg="github">GitHub</a>|
+      <a href="tel:+37368123456">📞 +373 78 843 899</a>
     </div>
     <canvas id="skillsChart"></canvas>
   </div>
   <div class="right">
     <div class="section">
       <h2 data-msg="about">About Me</h2>
-      <p data-msg="aboutText">I am Zereck — a support mage turned data wizard...</p>
+      <p data-msg="aboutText">I am Zereck — a support mage who spent many years helping others in digital worlds. One day, upon discovering the power hidden in data, I traded my grimoire for a Jupyter Notebook. Now I wander in search of knowledge in analytics, visualization, and machine learning to unravel the mysteries of numbers and become the Archmage of Insights.</p>
     </div>
     <div class="section">
-      <h2 data-msg="experience">Experience</h2>
-      <ul>
-        <li data-msg="exp1">2020–2023 — Support</li>
-        <li data-msg="exp2">2023 — Retraining</li>
-        <li data-msg="exp3">2024 — Internship</li>
-      </ul>
+      <h2 data-msg="experience">Work Experience</h2>
+
+      <div style="margin-bottom: 2rem;">
+        <h3 data-msg="exp1Title" style="color:#caffbf; margin: 0 0 0.3rem;">Dynava</h3>
+        <p data-msg="exp1Pos" style="margin:0.2rem 0;"><strong>Customer Support Agent</strong></p>
+        <p data-msg="exp1Time" style="margin:0.2rem 0; color:#aaa;">November 2022 – March 2025</p>
+        <p data-msg="exp1Desc" style="margin-top:0.5rem;">I coordinated taxi bookings for elderly and individuals with disabilities across the Stockholm region as part of a government program. This initiative is designed to support those who face challenges using public transportation due to various health conditions.</p>
+      </div>
+
+      <div>
+        <h3 data-msg="exp2Title" style="color:#caffbf; margin: 0 0 0.3rem;">Digital Grup</h3>
+        <p data-msg="exp2Pos" style="margin:0.2rem 0;"><strong>Customer Support Representative</strong></p>
+        <p data-msg="exp2Time" style="margin:0.2rem 0; color:#aaa;">March 2019 – Summer 2021</p>
+        <p data-msg="exp2Desc" class="text-gray-700 leading-relaxed">
+          Handled inbound message queries from clients via email.<br>
+          Assisted subscribers with account queries, billing and shipping issues, and payments.<br>
+          Aimed to solve any problems that arose, by responding to messages within several minutes.<br>
+          Provided timely updates for more complex issues.
+        </p>
+      </div>
     </div>
+
     <div class="section">
       <h2 data-msg="projects">Projects</h2>
       <ul>
-        <li data-msg="proj1">Behavior analysis...</li>
-        <li data-msg="proj2">Job parsing...</li>
-        <li data-msg="proj3">Dashboard creation...</li>
+        <li>
+          <strong data-msg="proj1Title">Project 1 - Excel Salary Dashboard</strong><br>
+          <span data-msg="proj1Desc">This project was completed as part of Luke Barousse’s Excel course to explore and visualize salaries in the data job market. The 2023 dataset includes job titles, salaries, locations, and required skills.</span><br><br>
+
+          <em data-msg="proj1ToolsTitle">Tools & Features Used:</em><br>
+          <span data-msg="proj1ToolsText">📉 Charts (Bar Chart, Map Chart)<br>🧮 Formulas and Functions (MEDIAN, FILTER)<br>❎ Data Validation</span><br><br>
+
+          <em data-msg="proj1InsightsTitle">Key Insights:</em><br>
+          <span data-msg="proj1InsightsText">Senior roles and engineers earn more than analysts.<br>Significant salary differences exist between countries.<br>Location and job type strongly influence compensation.</span><br><br>
+
+          <em data-msg="proj1OutcomeTitle">Outcome:</em><br>
+          <span data-msg="proj1OutcomeText">The dashboard provides a quick understanding of market salaries and enhanced my Excel data analysis skills.</span><br><br>
+
+          <span data-msg="proj1GitHubLink"></span>
+        </li>
+        <li>
+          <strong data-msg="proj2Title">Project 2 - Data Science Skills</strong><br>
+          <span data-msg="proj2Desc">This project, part of Luke Barousse’s Excel course, examines the most in-demand skills for data analysts and their impact on salaries using 2023 job market data.</span><br><br>
+
+          <em data-msg="proj2ToolsTitle">Tools & Features Used:</em><br>
+          <span data-msg="proj2ToolsText">📊 Pivot Tables & Pivot Charts<br>🧮 DAX (Data Analysis Expressions)<br>🔍 Power Query<br>💪 Power Pivot</span><br><br>
+
+          <em data-msg="proj2InsightsTitle">Key Insights:</em><br>
+          <span data-msg="proj2InsightsText">More skills often correlate with higher salaries, especially for senior technical roles.<br>Python, SQL, and cloud technologies (AWS, Azure) are linked to top-paying jobs.<br>Salary differences between US and non-US roles are significant in high-tech positions.</span><br><br>
+
+          <em data-msg="proj2OutcomeTitle">Outcome:</em><br>
+          <span data-msg="proj2OutcomeText">The analysis provides a data-driven guide for professionals seeking to boost their market value through targeted skill development.</span><br><br>
+
+          <span data-msg="proj2GitHubLink"></span>
+        </li>
       </ul>
     </div>
   </div>
 </div>
 
+<!-- Modal placeholder (keeps existing JS working) -->
+
 <div id="modalOverlay" class="modal-overlay">
   <div class="modal">
     <button class="close-btn" onclick="closeModal()">×</button>
-    <h2 data-msg="modalTitle">Summon Zereck</h2>
-    <input type="text" placeholder="Your name" data-msg="modalName"/>
-    <input type="email" placeholder="Email" data-msg="modalEmail"/>
-    <textarea rows="4" placeholder="Your message" data-msg="modalText"></textarea>
-    <button onclick="submitForm()" data-msg="modalSend">Send</button>
+    <h3 data-msg="modalTitle">Summon Zereck</h3>
+    <form id="contactForm" action="https://formspree.io/f/xkgzkake" method="POST">
+      <input type="text" name="name" placeholder="Your name" data-msg="modalName" required/>
+      <input type="email" name="_replyto" placeholder="Email" data-msg="modalEmail" required/>
+      <input type="tel" name="phone" placeholder="Phone" data-msg="modalPhone"/>
+      <textarea name="message" placeholder="Your message" data-msg="modalText" required></textarea>
+      <button type="submit" data-msg="modalSend">Send</button>
+    </form>
   </div>
 </div>
+
 
 <div id="notification" class="notification"></div>
 
 <script>
   const messages = {
-    en: {
-      summon: 'Summon Hero', github: 'GitHub', linkedin: 'LinkedIn',
-      about: 'About Me', aboutText: 'I am Zereck — a support mage who spent many years helping others in digital worlds. One day, upon discovering the power hidden in data, I traded my grimoire for a Jupyter Notebook. Now I wander in search of knowledge in analytics, visualization, and machine learning to unravel the mysteries of numbers and become the Archmage of Insights.',
-      experience: 'Experience', exp1: '2020–2023 — Support',
-      exp2: '2023 — Retraining', exp3: '2024 — Internship',
-      projects: 'Projects', proj1: 'Behavior analysis...', proj2: 'Job parsing...',
-      proj3: 'Dashboard creation...',
-      modalTitle: 'Summon Zereck', modalName: 'Your name', modalEmail: 'Email',
-      modalText: 'Your message', modalSend: 'Send',
-      notification: 'Hero summoned!'
-    },
-    ru: {
-      summon: 'Призвать героя', github: 'GitHub', linkedin: 'LinkedIn',
-      about: 'О себе', aboutText: 'Я Zereck — маг поддержки, долгие годы помогавший другим в цифровых мирах. Однажды, увидев силу, скрытую в данных, я сменил гримуар на Jupyter Notebook. Теперь странствую в поисках знаний об аналитике, визуализации и машинном обучении, чтобы разгадать тайны чисел и стать Архимагом Инсайтов.',
-      experience: 'Опыт работы', exp1: '2020–2023 — Поддержка',
-      exp2: '2023 — Переобучение', exp3: '2024 — Стажировка',
-      projects: 'Проекты', proj1: 'Анализ поведения...', proj2: 'Парсинг вакансий...',
-      proj3: 'Создание дашборда...',
-      modalTitle: 'Призвать Zereck', modalName: 'Твоё имя', modalEmail: 'Email',
-      modalText: 'Твоё послание', modalSend: 'Отправить',
-      notification: 'Герой призван!'
-    },
-    ro: { summon:'Chemare erou', github:'GitHub', linkedin:'LinkedIn',
-        about:'Despre mine', aboutText:'Sunt Zereck — un magician support care a ajutat mulți ani pe alții în lumile digitale. Într-o zi, descoperind puterea ascunsă în date, am înlocuit grimoriul cu Jupyter Notebook. Acum rătăcesc în căutarea cunoașterii despre analiză, vizualizare și machine learning, pentru a descifra misterele numerelor și a deveni Arhimagul Insight-urilor.',
-        experience:'Experiență', exp1:'2020–2023 — Suport',
-        exp2:'2023 — Recalificare', exp3:'2024 — Internship',
-        projects:'Proiecte', proj1:'Analiză comportament...', proj2:'Parsing joburi...',
-        proj3:'Creare dashboard...',
-        modalTitle:'Chemă Zereck', modalName:'Numele tău', modalEmail:'Email',
-        modalText:'Mesajul tău', modalSend:'Trimite',
-        notification:'Erou convocat!' },
-      sv: { summon:'Framkalla hjälte', github:'GitHub', linkedin:'LinkedIn',
-        about:'Om mig', aboutText:'Jag är Zereck – en stödmage som under många år hjälpte andra i digitala världar. En dag, när jag upptäckte kraften som döljer sig i data, bytte jag min grimoire mot en Jupyter Notebook. Nu vandrar jag i jakt på kunskap om analys, visualisering och maskininlärning för att avslöja siffrornas mysterier och bli Insikternas Ärkemagiker.',
-        experience:'Erfarenhet', exp1:'2020–2023 — Support',
-        exp2:'2023 — Omskolning', exp3:'2024 — Praktik',
-        projects:'Projekt', proj1:'Beteendeanalys...', proj2:'Jobb-parsing...',
-        proj3:'Dashboard skapande...',
-        modalTitle:'Framkalla Zereck', modalName:'Ditt namn', modalEmail:'Email',
-        modalText:'Ditt meddelande', modalSend:'Skicka',
-        notification:'Hjälte kallad!' },
-    };
-  
+  en: {
+    name: 'Zereck',
+    summon: 'Summon Hero',
+    github: 'GitHub',
+    linkedin: 'LinkedIn',
+    about: 'About Me',
+    aboutText: 'I am Zereck — a support mage who spent many years helping others in digital worlds. One day, upon discovering the power hidden in data, I traded my grimoire for a Jupyter Notebook. Now I wander in search of knowledge in analytics, visualization, and machine learning to unravel the mysteries of numbers and become the Archmage of Insights.',
+    experience: 'Work Experience',
+    exp1Title: 'Dynava',
+    exp1Pos: 'Customer Support Agent',
+    exp1Time: 'November 2022 – March 2025',
+    exp1Desc: 'I coordinated taxi bookings for elderly and individuals with disabilities across the Stockholm region as part of a government program. This initiative is designed to support those who face challenges using public transportation due to various health conditions.',
+    exp2Title: 'Digital Grup',
+    exp2Pos: 'Customer Support Representative',
+    exp2Time: 'March 2019 – Summer 2021',
+    exp2Desc: 'Handled inbound message queries from clients via email.<br>Assisted subscribers with account queries, billing and shipping issues, and payments.<br>Aimed to solve any problems that arose, by responding to messages within several minutes.<br>Provided timely updates for more complex issues.',
+    projects: 'Projects',
+    proj1Title: 'Project 1 - Excel Salary Dashboard',
+    proj1Desc: 'This project was completed as part of Luke Barousse’s Excel course to explore and visualize salaries in the data job market. The 2023 dataset includes job titles, salaries, locations, and required skills.',
+    proj1ToolsTitle: 'Tools & Features Used:',
+    proj1ToolsText: '📉 Charts (Bar Chart, Map Chart)<br>🧮 Formulas and Functions (MEDIAN, FILTER)<br>❎ Data Validation',
+    proj1InsightsTitle: 'Key Insights:',
+    proj1InsightsText: 'Senior roles and engineers earn more than analysts.<br>Significant salary differences exist between countries.<br>Location and job type strongly influence compensation.',
+    proj1OutcomeTitle: 'Outcome:',
+    proj1OutcomeText: 'The dashboard provides a quick understanding of market salaries and enhanced my Excel data analysis skills.',
+    proj1GitHubLink: 'You can find more information about this project on my <a href="https://github.com/Ygrikk/Projects/blob/main/Excel_Project_1/README.MD" target="_blank" style="color:#caffbf;">GitHub</a>.',
+    proj2Title: 'Project 2 - Data Science Skills',
+    proj2Desc: 'This project, part of Luke Barousse’s Excel course, examines the most in-demand skills for data analysts and their impact on salaries using 2023 job market data.',
+    proj2ToolsTitle: 'Tools & Features Used:',
+    proj2ToolsText: '📊 Pivot Tables & Pivot Charts<br>🧮 DAX (Data Analysis Expressions)<br>🔍 Power Query<br>💪 Power Pivot',
+    proj2InsightsTitle: 'Key Insights:',
+    proj2InsightsText: 'More skills often correlate with higher salaries, especially for senior technical roles.<br>Python, SQL, and cloud technologies (AWS, Azure) are linked to top-paying jobs.<br>Salary differences between US and non-US roles are significant in high-tech positions.',
+    proj2OutcomeTitle: 'Outcome:',
+    proj2OutcomeText: 'The analysis provides a data-driven guide for professionals seeking to boost their market value through targeted skill development.',
+    proj2GitHubLink: 'You can find more information about this project on my <a href="https://github.com/Ygrikk/Projects/blob/main/Excel_Project_2/README.MD" target="_blank" style="color:#caffbf;">GitHub</a>.',
+    modalTitle: 'Summon Zereck',
+    modalName: 'Your name',
+    modalEmail: 'Email',
+    modalPhone: 'Phone',
+    modalText: 'Your message',
+    modalSend: 'Send',
+    notification: 'Message sent to the hero!'
+  },
+  ru: {
+    name: 'Zereck',
+    summon: 'Призвать героя',
+    github: 'GitHub',
+    linkedin: 'LinkedIn',
+    about: 'О себе',
+    aboutText: 'Я Zereck — маг поддержки, долгие годы помогавший другим в цифровых мирах. Однажды, увидев силу, скрытую в данных, я сменил гримуар на Jupyter Notebook. Теперь странствую в поисках знаний об аналитике, визуализации и машинном обучении, чтобы разгадать тайны чисел и стать Архимагом Инсайтов.',
+    experience: 'Опыт работы',
+    exp1Title: 'Dynava',
+    exp1Pos: 'Агент поддержки клиентов',
+    exp1Time: 'Ноябрь 2022 – Март 2025',
+    exp1Desc: 'Я координировал заказ такси для пожилых и людей с ограниченными возможностями по всему Стокгольму в рамках государственной программы. Эта инициатива предназначена для поддержки тех, кто испытывает трудности с использованием общественного транспорта из-за различных проблем со здоровьем.',
+    exp2Title: 'Digital Grup',
+    exp2Pos: 'Представитель службы поддержки',
+    exp2Time: 'Март 2019 – Лето 2021',
+    exp2Desc: 'Обрабатывал входящие запросы клиентов по электронной почте.<br>Помогал абонентам с вопросами по аккаунту, оплате, доставке и платежам.<br>Старался быстро решать возникающие проблемы, отвечая в течение нескольких минут.<br>Предоставлял своевременные обновления по более сложным вопросам.',
+    projects: 'Проекты',
+    proj1Title: 'Проект 1 — Дашборд зарплат в Excel',
+    proj1Desc: 'Этот проект выполнен в рамках курса Excel Льюка Барусса для изучения и визуализации зарплат на рынке труда в сфере данных. Набор данных 2023 года включает должности, зарплаты, локации и необходимые навыки.',
+    proj1ToolsTitle: 'Используемые инструменты и функции:',
+    proj1ToolsText: '📉 Диаграммы (гистограмма, карта)<br>🧮 Формулы и функции (MEDIAN, FILTER)<br>❎ Проверка данных',
+    proj1InsightsTitle: 'Основные выводы:',
+    proj1InsightsText: 'Старшие специалисты и инженеры зарабатывают больше аналитиков.<br>Существенные различия в зарплатах между странами.<br>Местоположение и тип работы сильно влияют на оплату.',
+    proj1OutcomeTitle: 'Результат:',
+    proj1OutcomeText: 'Дашборд позволяет быстро понять рынок зарплат и улучшил мои навыки анализа данных в Excel.',
+    proj1GitHubLink: 'Подробнее о проекте на моём <a href="https://github.com/Ygrikk/Projects/blob/main/Excel_Project_1/README.MD" target="_blank" style="color:#caffbf;">GitHub</a>.',
+    proj2Title: 'Проект 2 — Навыки Data Science',
+    proj2Desc: 'Этот проект, часть курса Excel Льюка Барусса, исследует самые востребованные навыки для дата-аналитиков и их влияние на зарплаты с использованием данных рынка труда 2023 года.',
+    proj2ToolsTitle: 'Используемые инструменты и функции:',
+    proj2ToolsText: '📊 Сводные таблицы и диаграммы<br>🧮 DAX (выражения для анализа данных)<br>🔍 Power Query<br>💪 Power Pivot',
+    proj2InsightsTitle: 'Основные выводы:',
+    proj2InsightsText: 'Большое количество навыков часто связано с более высокой зарплатой, особенно у старших технических специалистов.<br>Python, SQL и облачные технологии (AWS, Azure) связаны с самыми высокооплачиваемыми позициями.<br>Значительные различия в зарплатах между США и другими странами в высокотехнологичных сферах.',
+    proj2OutcomeTitle: 'Результат:',
+    proj2OutcomeText: 'Анализ дает данные для принятия решений специалистам, желающим повысить свою ценность на рынке через целенаправленное развитие навыков.',
+    proj2GitHubLink: 'Подробнее о проекте на моём <a href="https://github.com/Ygrikk/Projects/blob/main/Excel_Project_2/README.MD" target="_blank" style="color:#caffbf;">GitHub</a>.',
+    modalTitle: 'Призвать Zereck',
+    modalName: 'Твоё имя',
+    modalEmail: 'Email',
+    modalPhone: 'Телефон',
+    modalText: 'Твоё сообщение',
+    modalSend: 'Отправить',
+    notification: 'Сообщение отправлено герою!'
+  },
+
+  ro: {
+    name: 'Zereck',
+    summon: 'Chemare erou',
+    github: 'GitHub',
+    linkedin: 'LinkedIn',
+    about: 'Despre mine',
+    aboutText: 'Sunt Zereck — un magician suport care a ajutat mulți ani pe alții în lumile digitale. Într-o zi, descoperind puterea ascunsă în date, am înlocuit grimoriul cu Jupyter Notebook. Acum rătăcesc în căutarea cunoașterii despre analiză, vizualizare și machine learning, pentru a descifra misterele numerelor și a deveni Arhimagul Insight-urilor.',
+    experience: 'Experiență',
+    exp1Title: 'Dynava',
+    exp1Pos: 'Agent suport clienți',
+    exp1Time: 'Noiembrie 2022 – Martie 2025',
+    exp1Desc: 'Am coordonat rezervările de taxi pentru vârstnici și persoane cu dizabilități în întreaga regiune Stockholm, ca parte a unui program guvernamental. Această inițiativă este menită să sprijine pe cei care întâmpină dificultăți în folosirea transportului public din cauza unor probleme de sănătate.',
+    exp2Title: 'Digital Grup',
+    exp2Pos: 'Reprezentant suport clienți',
+    exp2Time: 'Martie 2019 – Vara 2021',
+    exp2Desc: 'Am gestionat solicitările de mesaje primite de la clienți prin email.<br>Am asistat abonații cu întrebări legate de cont, facturare, probleme de livrare și plăți.<br>Am încercat să rezolv rapid orice probleme apărute, răspunzând în câteva minute.<br>Am oferit actualizări la timp pentru probleme mai complexe.',
+    projects: 'Proiecte',
+    proj1Title: 'Proiect 1 — Dashboard salarii Excel',
+    proj1Desc: 'Acest proiect a fost realizat în cadrul cursului Excel al lui Luke Barousse pentru a explora și vizualiza salariile pe piața muncii din domeniul datelor. Setul de date din 2023 include titluri de joburi, salarii, locații și competențe necesare.',
+    proj1ToolsTitle: 'Instrumente și funcționalități utilizate:',
+    proj1ToolsText: '📉 Grafice (Bar Chart, Map Chart)<br>🧮 Formule și funcții (MEDIAN, FILTER)<br>❎ Validare date',
+    proj1InsightsTitle: 'Principalele concluzii:',
+    proj1InsightsText: 'Rolurile senior și inginerii câștigă mai mult decât analiștii.<br>Există diferențe salariale semnificative între țări.<br>Locația și tipul jobului influențează puternic compensarea.',
+    proj1OutcomeTitle: 'Rezultat:',
+    proj1OutcomeText: 'Dashboard-ul oferă o înțelegere rapidă a salariilor de piață și mi-a îmbunătățit abilitățile de analiză a datelor în Excel.',
+    proj1GitHubLink: 'Poți găsi mai multe informații despre acest proiect pe <a href="https://github.com/Ygrikk/Projects/blob/main/Excel_Project_1/README.MD" target="_blank" style="color:#caffbf;">GitHub</a>.',
+    proj2Title: 'Proiect 2 — Abilități Data Science',
+    proj2Desc: 'Acest proiect, parte din cursul Excel al lui Luke Barousse, analizează cele mai căutate abilități pentru analiștii de date și impactul lor asupra salariilor folosind datele pieței muncii din 2023.',
+    proj2ToolsTitle: 'Instrumente și funcționalități utilizate:',
+    proj2ToolsText: '📊 Tabele pivot și grafice pivot<br>🧮 DAX (Expresii pentru analiză de date)<br>🔍 Power Query<br>💪 Power Pivot',
+    proj2InsightsTitle: 'Principalele concluzii:',
+    proj2InsightsText: 'Mai multe abilități corelează adesea cu salarii mai mari, în special pentru rolurile tehnice senior.<br>Python, SQL și tehnologiile cloud (AWS, Azure) sunt legate de joburile cel mai bine plătite.<br>Diferențele salariale între rolurile din SUA și cele non-SUA sunt semnificative în pozițiile high-tech.',
+    proj2OutcomeTitle: 'Rezultat:',
+    proj2OutcomeText: 'Analiza oferă un ghid bazat pe date pentru profesioniștii care doresc să își crească valoarea pe piață prin dezvoltarea țintită a abilităților.',
+    proj2GitHubLink: 'Poți găsi mai multe informații despre acest proiect pe <a href="https://github.com/Ygrikk/Projects/blob/main/Excel_Project_2/README.MD" target="_blank" style="color:#caffbf;">GitHub</a>.',
+    modalTitle: 'Chemă Zereck',
+    modalName: 'Numele tău',
+    modalEmail: 'Email',
+    modalPhone: 'Telefon',
+    modalText: 'Mesajul tău',
+    modalSend: 'Trimite',
+    notification: 'Mesaj trimis eroului!'
+  },
+
+  sv: {
+    name: 'Zereck',
+    summon: 'Åkalla hjälte',
+    github: 'GitHub',
+    linkedin: 'LinkedIn',
+    about: 'Om mig',
+    aboutText: 'Jag är Zereck — en supportmagiker som har hjälpt andra i digitala världar i många år. En dag, när jag upptäckte kraften i data, bytte jag ut min grimoar mot en Jupyter Notebook. Nu vandrar jag i jakt på kunskap inom analys, visualisering och maskininlärning för att avslöja siffers mysterier och bli Insights Arkmagiker.',
+    experience: 'Arbetslivserfarenhet',
+    exp1Title: 'Dynava',
+    exp1Pos: 'Kundsupportagent',
+    exp1Time: 'November 2022 – Mars 2025',
+    exp1Desc: 'Jag koordinerade taxibokningar för äldre och personer med funktionsnedsättning i hela Stockholmsregionen som en del av ett statligt program. Initiativet är utformat för att stödja dem som har svårt att använda kollektivtrafiken på grund av olika hälsotillstånd.',
+    exp2Title: 'Digital Grup',
+    exp2Pos: 'Kundsupportrepresentant',
+    exp2Time: 'Mars 2019 – Sommaren 2021',
+    exp2Desc: 'Hantera inkommande meddelanden från kunder via e-post.<br>Hjälpte abonnenter med kontofrågor, fakturerings- och leveransproblem samt betalningar.<br>Målet var att lösa eventuella problem snabbt genom att svara inom några minuter.<br>Erbjöd snabba uppdateringar för mer komplexa ärenden.',
+    projects: 'Projekt',
+    proj1Title: 'Projekt 1 — Excel Lönedashboard',
+    proj1Desc: 'Detta projekt genomfördes som en del av Luke Barousse Excel-kurs för att utforska och visualisera löner på datamarknaden. Datasetet från 2023 innehåller jobbtitlar, löner, platser och nödvändiga färdigheter.',
+    proj1ToolsTitle: 'Verktyg och funktioner som används:',
+    proj1ToolsText: '📉 Diagram (Stapeldiagram, Karta)<br>🧮 Formler och funktioner (MEDIAN, FILTER)<br>❎ Datavalidering',
+    proj1InsightsTitle: 'Viktiga insikter:',
+    proj1InsightsText: 'Seniora roller och ingenjörer tjänar mer än analytiker.<br>Betydande löneskillnader finns mellan länder.<br>Plats och jobbtillhörighet påverkar starkt ersättningen.',
+    proj1OutcomeTitle: 'Resultat:',
+    proj1OutcomeText: 'Dashboarden ger en snabb förståelse för marknadslöner och förbättrade mina Excel-färdigheter inom dataanalys.',
+    proj1GitHubLink: 'Du kan hitta mer information om detta projekt på mitt <a href="https://github.com/Ygrikk/Projects/blob/main/Excel_Project_1/README.MD" target="_blank" style="color:#caffbf;">GitHub</a>.',
+    proj2Title: 'Projekt 2 — Data Science-färdigheter',
+    proj2Desc: 'Detta projekt, en del av Luke Barousse Excel-kursen, undersöker de mest efterfrågade färdigheterna för dataanalytiker och deras påverkan på löner med hjälp av data från arbetsmarknaden 2023.',
+    proj2ToolsTitle: 'Verktyg och funktioner som används:',
+    proj2ToolsText: '📊 Pivottabeller och pivotdiagram<br>🧮 DAX (Data Analysis Expressions)<br>🔍 Power Query<br>💪 Power Pivot',
+    proj2InsightsTitle: 'Viktiga insikter:',
+    proj2InsightsText: 'Fler färdigheter korrelerar ofta med högre löner, särskilt för seniora tekniska roller.<br>Python, SQL och molnteknologier (AWS, Azure) är kopplade till de bäst betalda jobben.<br>Löneskillnader mellan USA och icke-USA-roller är betydande inom high-tech-positioner.',
+    proj2OutcomeTitle: 'Resultat:',
+    proj2OutcomeText: 'Analysen ger en datadriven guide för yrkesverksamma som vill öka sitt marknadsvärde genom riktad kompetensutveckling.',
+    proj2GitHubLink: 'Du kan hitta mer information om detta projekt på mitt <a href="https://github.com/Ygrikk/Projects/blob/main/Excel_Project_2/README.MD" target="_blank" style="color:#caffbf;">GitHub</a>.',
+    modalTitle: 'Åkalla Zereck',
+    modalName: 'Ditt namn',
+    modalEmail: 'E-post',
+    modalPhone: 'Telefon',
+    modalText: 'Ditt meddelande',
+    modalSend: 'Skicka',
+    notification: 'Meddelandet skickades till hjälten!'
+  }
+};
 
   function setLanguage(lang) {
     document.querySelectorAll('[data-msg]').forEach(el => {
       const key = el.getAttribute('data-msg');
-      if (messages[lang][key]) {
-        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-          el.placeholder = messages[lang][key];
+      if (!messages[lang] || typeof messages[lang][key] === 'undefined') return;
+      const value = messages[lang][key];
+
+      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+        el.placeholder = value;
+      } else {
+        // Если строка содержит HTML-теги — используем innerHTML, иначе textContent.
+        if (/<[^>]+>/g.test(value)) {
+          el.innerHTML = value;
         } else {
-          el.textContent = messages[lang][key];
+          el.textContent = value;
         }
       }
     });
@@ -284,10 +478,9 @@
   document.getElementById('langSelect').onchange = (e) => {
     const lang = e.target.value;
     setLanguage(lang);
-    window.history.pushState({}, '', '/' + lang);
+    try { window.history.pushState({}, '', '/' + lang); } catch (err) { /* ignore on file:// */ }
   };
 
-  // Detect language from URL
   const pathLang = window.location.pathname.split('/')[1];
   const validLangs = ['en', 'ru', 'ro', 'sv'];
   const selectedLang = validLangs.includes(pathLang) ? pathLang : 'en';
@@ -302,21 +495,37 @@
     document.getElementById('modalOverlay').style.display = 'none';
   }
 
-  function submitForm() {
-    closeModal();
-    const lang = document.getElementById('langSelect').value;
-    const note = document.getElementById('notification');
-    note.textContent = messages[lang].notification;
-    note.style.display = 'block';
-    setTimeout(() => note.style.display = 'none', 3000);
-  }
+  
 
-  new Chart(document.getElementById('skillsChart'), {
+  
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
+  try {
+    const response = await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+    if (response.ok) {
+      closeModal();
+      const lang = document.getElementById('langSelect').value;
+      const note = document.getElementById('notification');
+      note.textContent = messages[lang].notification;
+      note.style.display = 'block';
+      setTimeout(() => note.style.display = 'none', 3000);
+      form.reset();
+    } else {
+      alert('Error sending message. Please try again later.');
+    }
+  } catch (err) {
+    alert('Error sending message.');
+  }
+});
+
+new Chart(document.getElementById('skillsChart'), {
     type: 'radar',
     data: {
       labels: ['Research', 'Statistics', 'ML', 'Soft Skills', 'Visualization', 'Excel/BI', 'SQL', 'ETL', 'Programming'],
       datasets: [{
-        data: [2, 4, 2, 4, 5, 5, 4, 2, 3],
+        data: [3, 2, 0, 4, 3, 5, 0, 2, 2],
         backgroundColor: 'rgba(24,48,36,0.4)',
         borderColor: '#a8e6cf',
         pointBackgroundColor: '#caffbf',
@@ -324,8 +533,8 @@
       }]
     },
     options: {
-      responsive: true,
-      maintainAspectRatio: true,
+      responsive: false,
+      maintainAspectRatio: false,
       scales: {
         r: {
           angleLines: { display: true, color: '#567d46' },
